@@ -1,6 +1,5 @@
 set datafile separator ","
-set term png size 870,653 font "Times, 12"
-set key font ",12"
+set term png size 1560,800 font "Times, 28"
 set output "fe_all-1m-ULM.png"
 set xrange [0:]
 set xlabel "time [ms]"

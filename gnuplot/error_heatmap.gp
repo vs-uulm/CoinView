@@ -1,9 +1,7 @@
 set datafile separator ";"
-#set term png size 1739,1306
-set term png size 870,653 font "Times, 12"
-set key font ",12"
+set term png size 1560,800 font "Times, 28"
 set output "pe_heat-map.png"
-set ylabel "sigma"
+set ylabel "σ"
 set xlabel "µ"
 set zlabel "deviation"
 set xrange [5:19]

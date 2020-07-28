@@ -1,7 +1,6 @@
 set datafile separator ";"
 #set term png size 1739,1306
-set term png size 870,653 font "Times, 12"
-set key font ",12"
+set term png size 1560,800 font "Times, 28"
 set output "pe_error_curve.png"
 set xlabel "sigma"
 set ylabel "deviation"
