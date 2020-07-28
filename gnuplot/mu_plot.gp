@@ -1,6 +1,5 @@
 set datafile separator ","
-set term png size 870,653 font "Times, 12"
-set key font ",12"
+set term png size 1560,800 font "Times, 28"
 set output P1.".png"
 set xrange [0:]
 set xlabel "time [ms]"
@@ -19,7 +18,7 @@ Truthcolor = "#003c9e"
 
 # base file to compare
 # large version example: random--1m-ULM
-filename = "../datasets/random-".P1."-min"
+filename = "../datasets/random-".P1
 
 # ground truth via scipy
 # large version example: txsplit--1m-ULM.truth.sort.csv

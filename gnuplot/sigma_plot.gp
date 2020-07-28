@@ -1,10 +1,9 @@
 set datafile separator ","
-set term png size 870,653 font "Times, 12"
-set key font ",12"
+set term png size 1560,800 font "Times, 28"
 set output ARG1."sigma.png"
 set xrange [0:]
 set xlabel "time [ms]"
-set ylabel "sigma"
+set ylabel "σ"
 set key nobox right bottom
 set title "Adaption of sigma over time"
 set grid xtics mxtics ytics mytics

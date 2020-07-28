@@ -62,4 +62,16 @@ An example call might be `python3 run.py 1 2 xyz.csv XY` and will append XY to a
 
 ### Evaluation:
 
+ * split to split a log by transaction
+ * randommerge to merge a given amount of connections (e.g. 8) to a virtual log as if connected to those 8 based on the split transactions, e.g., `./randommerge.sh 1000 8 split-1m-GBS`
+ * apply to apply btcmon to the given datasets, generate and parse results
+ * txapply to apply parameter estimation to gain a ground truth
 
+Example workflow to create the ground truth dataset for the last 1 mio seen transactions:
+
+```
+tail -n 1000000 crawler-06-02-2019-03-13-04-GBS-SIMUL.csv > 1m-GBS.csv
+python3 txsplit.py 1m-GBS.csv
+./txapply.sh txsplit-1m-GBS/
+sort --field-separator=',' --key=1 truth.csv > txsplit-1m-GBS.truth.sort.csv
+```
