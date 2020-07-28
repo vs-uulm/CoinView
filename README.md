@@ -38,7 +38,8 @@ The modifications of bitcoinj 0.14.7 are:
 
  * Heatmap: `gnuplot error_heatmap.gp`
  * Error Curve: `gnuplot error_fitting_curve.gp`
- * 
+ * tracking mu plot for example dataset: `gnuplot eval_mu_1m_ulm.gp`
+ * tracking si plot for example dataset: `gnuplot eval_si_1m_ulm.gp`
 
 ### Modelling:
 
