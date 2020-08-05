@@ -57,13 +57,24 @@ The resulting bitcoinj-core-0.14.7-bundled.jar in core/target will be built with
 cd collection/application
 # compile
 javac -cp ./bitcoinj-core-0.14.7-bundled.jar .\research\*.java
+```
 
-# run
+To run the example code to collect data:
+
+```
 # linux:
 java -cp ".:./bitcoinj-core-0.14.7-bundled.jar" research/Main
 
 # windows:
 java -cp ".;./bitcoinj-core-0.14.7-bundled.jar" research/Main
+```
+
+Data will be writte to a file of the form: "crawler-dd.mm.yyyy hh.mm.ss.csv" where date and time shortages are replaced by the current date and time.
+
+If trouble occurs, these commands can also be run from within a docker container:
+
+```
+docker run -it --rm -v ${PWD}:/usr/src/btccol -w /usr/src/btccol --rm openjdk:8 /bin/bash
 ```
 
 ### Gnuplot:
