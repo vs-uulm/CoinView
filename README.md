@@ -54,6 +54,7 @@ mvn clean package
 The resulting bitcoinj-core-0.14.7-bundled.jar in core/target will be built with our data collection application.
 
 ```
+cd collection/application
 # compile
 javac -cp ./bitcoinj-core-0.14.7-bundled.jar .\research\*.java
 
