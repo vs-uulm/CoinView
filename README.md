@@ -34,6 +34,37 @@ The modifications of bitcoinj 0.14.7 are:
 
 ## Usage
 
+### Data Collection
+
+The data collection is based on the [bitcoinj](https://github.com/bitcoinj/bitcoinj/tree/b131cc77384ed398b205d3e2e932d1d8228c4edb) library in version 0.14.7.
+
+Apply the patch to bitcoinj:
+
+```
+git clone https://github.com/bitcoinj/bitcoinj.git
+git fetch --all --tags
+git checkout tags/v0.14.7
+git apply bitcoinj_0.14.7.patch
+mvn clean package
+
+# to make sure all works, you may also use docker with (windows powershell: ${PWD} linux: $(pwd))
+# docker run -it --rm -v ${PWD}:/usr/src/btcj -w /usr/src/btcj maven:3-openjdk-8 mvn clean package
+```
+
+The resulting bitcoinj-core-0.14.7-bundled.jar in core/target will be built with our data collection application.
+
+```
+# compile
+javac -cp ./bitcoinj-core-0.14.7-bundled.jar .\research\*.java
+
+# run
+# linux:
+java -cp ".:./bitcoinj-core-0.14.7-bundled.jar" research/Main
+
+# windows:
+java -cp ".;./bitcoinj-core-0.14.7-bundled.jar" research/Main
+```
+
 ### Gnuplot:
 
  * Heatmap: `gnuplot error_heatmap.gp`
